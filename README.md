@@ -61,8 +61,8 @@ To create a store the createStore(reducer, [initialState], [enhancer]) which wil
 
 #### `Container Components VS Presentational Components`
 Components could be divided into two categories, I also heard Fat and Skinny, Smart and Dumb, Stateful and Pure, Screens and Components:
- . Container Components: Provide the data and behavior to presentational or other container components.
- . Presentational Components: 1) Have no dependencies on the rest of the app, 2) Are concerned with how things look.
+1. Container Components: Provide the data and behavior to presentational or other container components.
+2. Presentational Components: 1) Have no dependencies on the rest of the app, 2) Are concerned with how things look.
 
 
 ## Credit

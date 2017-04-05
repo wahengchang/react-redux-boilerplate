@@ -24,13 +24,17 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
+    "enzyme": "^2.8.0",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.4.2",
     "webpack": "^1.12.15",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "./node_modules/jest/bin/jest.js  --coverage"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,7 @@
-# react-redux-helloworld
-Hello, World! app in React and Redux
+# react-redux-boilerplate
+ - It is a boilerplate of React-Redux as the infrastructure, which helps to setup a Web APP quickly Edit
+ - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285)
+
 
 ## Install
 

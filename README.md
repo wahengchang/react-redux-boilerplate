@@ -36,7 +36,7 @@ Above is the structure of how the whole app works, the app bases on Express web 
 _**index.js**_ , as the entry file and a high level root component, which gathers all the sub-component as the subtree of the Virtual DOM, also it is the only file entangled with many independent modules. Apart from it, different file requires independent modules, which makes clean code and work independently.
 
 ## Must Know
-#### <Provider> 
+#### `<Provider>` 
 It magically make the store available to all container components in the application without passing it explicitly. You only need to use it once when you render the root component:
 ```
 import { Provider } from 'react-redux'
@@ -50,16 +50,16 @@ render(
 )
 ```
 
-#### connect( ... )
+#### `connect( ... )`
 Connecting a React component to Redux allows the component to use the top-level store without having to pass the store down as a prop through its parent components
 
-#### combineReducers( ... )
+#### `combineReducers( ... )`
 It turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.
 
-#### createStore( ... )
+#### `createStore( ... )`
 To create a store the createStore(reducer, [initialState], [enhancer]) which will be passed in <Provider>:
 
-#### Container Components VS Presentational Components
+#### `Container Components VS Presentational Components`
 Components could be divided into two categories, I also heard Fat and Skinny, Smart and Dumb, Stateful and Pure, Screens and Components:
  . Container Components: Provide the data and behavior to presentational or other container components.
  . Presentational Components: 1) Have no dependencies on the rest of the app, 2) Are concerned with how things look.

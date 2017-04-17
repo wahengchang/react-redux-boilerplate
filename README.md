@@ -23,8 +23,8 @@ open http://localhost:3000/
  - Compiling react/redux script to browser use lib, with webpack default optimized config.
  - Disable unnecessary funtionality which helps to debug in development mode
 ```
-$ npm start
-open http://localhost:3000/
+$ npm run build
+$ npm run start
 
 ```
 

@@ -1,9 +1,17 @@
 {
-  "presets": ["es2015", "react", "stage-0"],
-  "plugins": ["transform-runtime"],
+  "presets":[
+      "es2015", "react"
+  ],
   "env": {
     "development": {
+      "presets": ["es2015", "react", "stage-0"],
+      "plugins": ["transform-runtime"],
       "presets": ["react-hmre"]
+    }
+  },
+  "env": {
+    "build": {
+      "presets": ["es2015", "react", "stage-0"]
     }
   }
 }

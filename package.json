@@ -16,6 +16,8 @@
     "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
+    "babel-jest": "*",
+    "regenerator-runtime": "*",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.7.5",
@@ -32,8 +34,9 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
-    "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node server.js",
+    "build": "NODE_ENV=build webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "NODE_ENV=development node server.js",
     "test": "./node_modules/jest/bin/jest.js  --coverage"
   },
   "repository": {
@@ -51,5 +54,8 @@
   "bugs": {
     "url": "https://github.com/wahengchang/react-redux-boilerplate/issues"
   },
-  "homepage": "https://github.com/wahengchang/react-redux-boilerplate#readme"
+  "homepage": "https://github.com/wahengchang/react-redux-boilerplate#readme",
+  "jest": {
+    "testPathIgnorePatterns": ["./__tests__/notRun.js"]
+  }
 }

@@ -10,7 +10,18 @@ $ git clone https://github.com/wahengchang/react-redux-boilerplate
 $ npm install
 ```
 
-## Run
+## Run (Develop Mode)
+It is runnign in Development mode, enable HMR
+```
+$ npm start
+open http://localhost:3000/
+
+```
+
+
+## Run (Production Mode)
+ - Compiling react/redux script to browser use lib, with webpack default optimized config.
+ - Disable unnecessary funtionality which helps to debug in development mode
 ```
 $ npm start
 open http://localhost:3000/

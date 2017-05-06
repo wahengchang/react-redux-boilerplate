@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(require('express').static('public'))
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile(__dirname + '/src/index.html')
 })
 
 app.listen(port, function(error) {

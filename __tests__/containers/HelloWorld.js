@@ -4,8 +4,8 @@ import { createStore } from 'redux'
 import { shallow, mount } from 'enzyme'
 import React from 'react'
 
-import helloReducer from '../../reducers'
-import HelloWorld from '../../containers/HelloWorld.js'
+import helloReducer from '../../src/reducers'
+import HelloWorld from '../../src/containers/HelloWorld.js'
 
 let store = createStore(helloReducer)
 

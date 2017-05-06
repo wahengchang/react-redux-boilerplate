@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import Hello from '../../components/Hello'
+import Hello from '../../src/components/Hello'
 
 var _mockMessage = 'mock message'
 

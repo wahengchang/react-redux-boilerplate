@@ -1,4 +1,4 @@
-import * as actions from '../../actions/index.js'
+import * as actions from '../../src/actions/index.js'
 
 describe('actions', () => {
   it('should create an action for HelloWorld', () => {

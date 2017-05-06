@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { HELLO_WORLD, SET_MESSAGE } from './../actions'
+import { HELLO_WORLD, SET_MESSAGE } from '../config/actionType'
 
 const helloWorld = (state = { message: 'Hello' }, action) => {
   switch (action.type) {

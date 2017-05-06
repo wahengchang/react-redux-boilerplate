@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { HELLO_WORLD } from './../actions'
+import { HELLO_WORLD } from '../config/actionType'
 import Hello from './../components/Hello'
 
 const mapStateToProps = (state, ownProps) => {

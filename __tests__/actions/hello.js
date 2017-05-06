@@ -1,4 +1,4 @@
-import helloActionCreator from '../../src/actions/index.js'
+import helloActionCreator from '../../src/actions/hello.js'
 
 describe('helloActionCreator', () => {
   it('should create an action for HelloWorld', () => {

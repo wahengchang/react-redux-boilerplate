@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Hello from './../components/Hello'
-import helloActionCreator from '../actions/index'
+import helloActionCreator from '../actions/hello'
 
 const mapStateToProps = (state, ownProps) => {
   return {

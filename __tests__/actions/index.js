@@ -1,13 +1,9 @@
-import * as actions from '../../src/actions/index.js'
+import helloActionCreator from '../../src/actions/index.js'
 
-describe('actions', () => {
+describe('helloActionCreator', () => {
   it('should create an action for HelloWorld', () => {
-
-    const expectedAction = {
-      type: 'HELLO_WORLD'
-    }
-
-    expect(actions.helloWorld()).toEqual(expectedAction)
-    
+      const dispatch = jest.fn();
+      helloActionCreator.helloWorld()(dispatch, {});
+      expect(dispatch).toBeCalledWith({ type: 'HELLO_WORLD' });
   })
 })

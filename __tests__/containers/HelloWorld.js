@@ -1,22 +1,26 @@
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, compose, applyMiddleware } from 'redux'
 import { shallow, mount } from 'enzyme'
 import React from 'react'
+import thunk from 'redux-thunk'
 
-import reducer from '../../src/reducers'
 import HelloWorld from '../../src/containers/HelloWorld.js'
 
-let store = createStore(reducer)
+import reducer from '../../src/reducers'
+
+
+let store = createStore(
+    reducer, 
+    compose(applyMiddleware(thunk))
+)
 
 const enzymeWrapper =  mount(
     <Provider store={store}>
         <HelloWorld />
     </Provider>)
 
-
 describe('containers', () => {
-  describe('HelloWorld', () => {
     it('should render self and subcomponents', () => {
         var _message1 = 'Hello'
         var _message2 = 'Hello, World!'
@@ -25,5 +29,4 @@ describe('containers', () => {
         enzymeWrapper.find('button').simulate('click');
         expect(enzymeWrapper.find('h1').text()).toBe(_message2)
     })
-  })
 })

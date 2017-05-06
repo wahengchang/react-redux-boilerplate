@@ -1,16 +1,20 @@
 import { HELLO_WORLD, SET_MESSAGE } from '../config/actionType'
 
-export const helloWorld = () => {
-  console.log('helloWorld actions')
-  return {
-    type: HELLO_WORLD
+const helloActionCreator = {
+  helloWorld : () => {
+    return (dispatch, getState) => {
+      return dispatch({
+        type: HELLO_WORLD,
+      })
+    }
+  }, 
+  setMessage : (_message) => {
+    return (dispatch, getState) => {
+      return dispatch({
+        type: SET_MESSAGE,
+        message: _message
+      })
+    }
   }
 }
-
-export const setMessage = (_message) => {
-  console.log('helloWorld actions')
-  return {
-    type: SET_MESSAGE,
-    message: _message
-  }
-}
+export default helloActionCreator

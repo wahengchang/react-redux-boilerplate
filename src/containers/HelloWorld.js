@@ -4,7 +4,7 @@ import Hello from './../components/Hello'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    message: state.helloWorld.message
+    message: state.hello.message
   }
 }
 
@@ -16,9 +16,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const HelloWorld = connect(
+const hello = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Hello)
 
-export default HelloWorld
+export default hello

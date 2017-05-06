@@ -4,10 +4,10 @@ import { createStore } from 'redux'
 import { shallow, mount } from 'enzyme'
 import React from 'react'
 
-import helloReducer from '../../src/reducers'
+import reducer from '../../src/reducers'
 import HelloWorld from '../../src/containers/HelloWorld.js'
 
-let store = createStore(helloReducer)
+let store = createStore(reducer)
 
 const enzymeWrapper =  mount(
     <Provider store={store}>

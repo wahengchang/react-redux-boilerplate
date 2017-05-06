@@ -1,7 +1,5 @@
 import { HELLO_WORLD, SET_MESSAGE } from '../config/actionType'
 
-
-
 export const helloWorld = () => {
   console.log('helloWorld actions')
   return {

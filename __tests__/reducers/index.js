@@ -4,15 +4,15 @@ describe('helloWorld reducer', () => {
   it('should return the initial state', () => {
     expect(
       reducer([], {})
-    ).toEqual({ helloWorld: { message: 'Hello' } })
+    ).toEqual({ hello: { message: 'Hello' } })
   })
 
   it('should return the HELLO_WORLD state', () => {
     expect(
-      reducer({helloWorld:""}, {
+      reducer({hello:""}, {
           type: 'HELLO_WORLD'
       })
-    ).toEqual({ helloWorld: { message: 'Hello, World!' } })
+    ).toEqual({ hello: { message: 'Hello, World!' } })
   })
 
   it('should return the SET_MESSAGE state', () => {
@@ -20,10 +20,10 @@ describe('helloWorld reducer', () => {
     var _message = 'I am message'
 
     expect(
-      reducer({helloWorld:""}, {
+      reducer({hello:""}, {
           type: 'SET_MESSAGE',
           message: _message
       })
-    ).toEqual({ helloWorld: { message: _message } })
+    ).toEqual({ hello: { message: _message } })
   })
 })

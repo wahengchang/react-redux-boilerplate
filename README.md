@@ -30,7 +30,7 @@ $ npm run start
 ```
 
 ## Test
-[More detail](https://github.com/wahengchang/react-redux-boilerplate/wiki/Test)
+[More detail](https://github.com/wahengchang/react-redux-boilerplate/wiki/Test ): about test of action creater, component, container and reducer 
 
 ```
 $ npm run test

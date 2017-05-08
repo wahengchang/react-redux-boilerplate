@@ -39,6 +39,11 @@ Snapshots:   0 total
 Time:        1.824s, estimated 2s
 
 ```
+or watch mode
+```
+$ ./node_modules/jest/bin/jest.js --watchAll #runs all tests
+```
+
 
 # Server Rendering Structure
 ![Server Rendering structure](https://cdn-images-1.medium.com/max/1500/1*uu7MvpLsU-UUzYCG42M8hA.jpeg "React Redux server rendering structure")

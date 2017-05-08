@@ -21,12 +21,13 @@ const enzymeWrapper =  mount(
     </Provider>)
 
 describe('containers', () => {
-    it('should render self and subcomponents', () => {
+    it('should render self and subcomponents', (done) => {
         var _message1 = 'Hello'
         var _message2 = 'Hello, World!'
 
         expect(enzymeWrapper.find('h1').text()).toBe(_message1)
         enzymeWrapper.find('button').simulate('click');
         expect(enzymeWrapper.find('h1').text()).toBe(_message2)
+        done()
     })
 })

@@ -4,7 +4,7 @@ import { createStore } from 'redux'
 let store = createStore(githubReducers, {})
 
 describe('github reducer', () => {
-  it('should return the initial state', () => {
+  it('should return the initial state', (done) => {
     const _username = '_username';
 
     store.dispatch({
@@ -13,5 +13,6 @@ describe('github reducer', () => {
     });    
 
     expect(store.getState().username).toBe(_username)
+    done()
   })
 })

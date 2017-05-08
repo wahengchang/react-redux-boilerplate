@@ -3,10 +3,10 @@ import {shallow} from 'enzyme'
 import Hello from '../../src/components/Hello'
 
 var _mockMessage = 'mock message'
-
+var _mockFun = jest.fn()
 function setup() {
   const props = {
-    onClick: jest.fn(),
+    onClick: _mockFun,
     message: _mockMessage
   }
 
@@ -16,10 +16,14 @@ function setup() {
 }
 
 describe('components', () => {
-  it('should render self and subcomponents', () => {
+  it('should render self and subcomponents', (done) => {
     const {enzymeWrapper} = setup()
     const newMessage = 'Hello, World!'
 
     expect(enzymeWrapper.find('h1').text()).toBe(_mockMessage)
+    enzymeWrapper.find('button').simulate('click')
+    expect(_mockFun).toBeCalled()
+
+    done()
   })
 })

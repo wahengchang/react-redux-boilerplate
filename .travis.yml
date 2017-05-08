@@ -1,0 +1,12 @@
+language: node_js
+
+# test on two node.js versions: 0.6 and 0.8
+node_js:
+  - 3
+  
+before_install:
+  - npm install -g npm@latest
+
+notifications:
+  email:
+    - wahengchang@gmail.com

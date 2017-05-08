@@ -1,18 +1,19 @@
-import {getGithubUser} from '../../src/actions/github.js'
+import jsonAPIActionCreator from '../../src/actions/jsonAPI'
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk'
 const mockStore = configureStore([thunk])
 
 describe('api action creator', () => {
-  it('get github user', (done) => {
-    fetch.mockResponse(JSON.stringify({login: 'waheng' }))
+  it('get apiJSON title', (done) => {
+    var mockData = [{title:'_title'}]
+    fetch.mockResponse(JSON.stringify(mockData))
 
     const store = mockStore({})
     const expectedActions = [
-      { type: 'SET_GITHUB_USER', username: 'waheng' }
+      { type: 'SET_API_DATA', products: mockData }
     ]
 
-    store.dispatch(getGithubUser())
+    store.dispatch(jsonAPIActionCreator.getJsonAPI())
       .then((res) => {
         expect(store.getActions()).toEqual(expectedActions)
         done()

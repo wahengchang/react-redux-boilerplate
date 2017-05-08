@@ -2,10 +2,9 @@ import apis from '../../src/actions/api.js'
 
 describe('api action creator', () => {
   it('get github user', (done) => {
-    apis.getGithubUser('waheng').then(
+    apis.getJsonAPI().then(
         (res) => {
-          console.log(res)
-            expect(res.login).toEqual('waheng');
+            expect(res[0].title).toMatch('');
             done();
         },
         (err) => done(err)

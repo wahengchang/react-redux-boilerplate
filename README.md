@@ -12,6 +12,10 @@ $ npm install
 
 ## Run (Develop Mode)
 It is runnign in Development mode, enable HMR
+ - http://localhost:3000/
+ - http://localhost:3000/api
+ - http://localhost:3000/app
+
 ```
 $ npm start
 open http://localhost:3000/

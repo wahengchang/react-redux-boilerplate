@@ -1,4 +1,5 @@
 
+require('babel-register');
 
 var app = new (require('express'))()
 var port = 3000
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(require('express').static('public'))
 
-app.get("/", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(__dirname + '/src/index.html')
 })
 

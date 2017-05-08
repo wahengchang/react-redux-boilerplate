@@ -1,11 +1,14 @@
+sudo: false
 language: node_js
-
-# test on two node.js versions: 0.6 and 0.8
 node_js:
-  - 3
-  
-before_install:
-  - npm install -g npm@latest
+  - "6"
+
+cache:
+  directories:
+    - node_modules
+    
+script:
+  - npm run test
 
 notifications:
   email:

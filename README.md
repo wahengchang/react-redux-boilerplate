@@ -14,11 +14,11 @@ $ npm install
 ## Run (Develop Mode)
 It is runnign in Development mode, enable HMR
  - http://localhost:3000/
- - http://localhost:3000/api
- - http://localhost:3000/app
+ - http://localhost:3000/api , example of action creator and click event
+ - http://localhost:3000/app , example of fetching data and update component
 
 ```
-$ npm start
+$ npm run dev
 open http://localhost:3000/
 
 ```

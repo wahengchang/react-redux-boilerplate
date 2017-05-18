@@ -17,9 +17,9 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(require('express').static('public'))
 
-app.get("*", function(req, res) {
-  res.sendFile(__dirname + '/src/index.html')
-})
+var handleRender = require('./src/handleRender')
+
+app.get("*", handleRender)
 
 app.listen(port, function(error) {
   if (error) {

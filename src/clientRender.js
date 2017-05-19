@@ -8,6 +8,7 @@ import thunk from 'redux-thunk'
 import _reducers from './reducers'
 import HelloWorld from './containers/HelloWorld'
 import JsonAPI from './containers/JsonAPI'
+import matchConfig from './matchConfig'
 import {
   StaticRouter,
   Route,
@@ -32,8 +33,9 @@ render(
   <Provider store={store}>
     <StaticRouter location={window.location.pathname} context={{}}>
       <Switch>
-        <Route exact path="/" component={HelloWorld}/>
-        <Route path="/api" component={JsonAPI}/>  
+          {
+            matchConfig.map((route, index) => <Route key={`route${index}`} {...route} />)
+          }
       </Switch>
     </StaticRouter>
   </Provider>,

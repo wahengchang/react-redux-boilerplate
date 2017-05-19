@@ -21,4 +21,13 @@ const jsonAPIContainer = connect(
   mapDispatchToProps
 )(JsonAPI)
 
+
+jsonAPIContainer.initState = (store,req,res) => {
+    return (dispatch, getState) => {
+      return new Promise( (resolve, reject)=> {
+        resolve();
+      })
+    }
+}
+
 export default jsonAPIContainer

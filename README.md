@@ -14,8 +14,8 @@ $ npm install
 ## Run (Develop Mode)
 It is runnign in Development mode, enable HMR
  - http://localhost:3000/
- - http://localhost:3000/api , example of action creator and click event
- - http://localhost:3000/app , example of fetching data and update component
+ - http://localhost:3000/api , example of fetching data by action, and dispatch to update UI component
+ - http://localhost:3000/preload , example of dispatch data before server rendering components
 
 ```
 $ npm run dev

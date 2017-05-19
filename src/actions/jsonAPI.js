@@ -6,6 +6,7 @@ import apis from './api.js'
 
 const jsonAPIActionCreator = {
   getJsonAPI : () => {
+  console.log(' jsonAPI -------1 ')
     return function (dispatch, getState) {
       return apis.getJsonAPI().then((res)=> {
         dispatch({

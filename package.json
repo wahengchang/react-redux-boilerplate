@@ -2,7 +2,7 @@
   "name": "react-redux-boilerplate",
   "version": "1.0.0",
   "description": "Hello, World! app in React and Redux",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",

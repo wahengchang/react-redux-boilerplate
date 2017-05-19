@@ -12,9 +12,13 @@ const composeEnhancers = process.env.NODE_ENV !== 'production' && typeof window 
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   : compose
 
+const initState = window.__PRELOADED_STATE__
+delete window.__PRELOADED_STATE__
+
 const store = createStore(
     _reducers,
-    composeEnhancers(applyMiddleware(thunk))
+    initState,
+    composeEnhancers(applyMiddleware(thunk)),
   )
 
 render(

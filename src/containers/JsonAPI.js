@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchData: () => {
-    console.log('-----containers', jsonAPIActionCreator)
       dispatch(jsonAPIActionCreator.getJsonAPI());
     }
   }

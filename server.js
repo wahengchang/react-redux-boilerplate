@@ -17,9 +17,9 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(require('express').static('public'))
 
-var handleRender = require('./src/handleRender')
+var serverRender = require('./src/serverRender')
 
-app.get("*", handleRender)
+app.get("*", serverRender)
 
 app.listen(port, function(error) {
   if (error) {

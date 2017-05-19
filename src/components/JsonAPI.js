@@ -9,9 +9,9 @@ class JsonAPI extends React.Component {
 
   render() {
     const { products } = this.props
-    const _renderli = products.map((item)=>{
+    const _renderli = products.map((item, index)=>{
       return (
-        <div>
+        <div key={index}>
           <h2>{item.id} 
             <small> {item.title}</small>
           </h2>

@@ -1,6 +1,7 @@
 
 import HelloWorld from './containers/HelloWorld'
 import PreloadHelloWorld from './containers/PreloadHelloWorld'
+import NewPage from './containers/NewPage'
 import JsonAPI from './containers/JsonAPI'
 
 const matchConfig = [
@@ -13,6 +14,11 @@ const matchConfig = [
     path: '/preload',
     component: PreloadHelloWorld,
     initState: PreloadHelloWorld.initState
+  },
+  {
+    path: '/newpage',
+    component: NewPage,
+    initState: NewPage.initState
   },
   {
     path: '/',

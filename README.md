@@ -2,6 +2,7 @@
  - It is a boilerplate of React-Redux as the infrastructure, which helps to setup a Web APP quickly Edit
  - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) : story on Medium
  - [Documentation](https://github.com/wahengchang/react-redux-boilerplate/wiki) : detail about test and architecture
+ - [Tutorial](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page) : add a new page
 
 
 ## Install

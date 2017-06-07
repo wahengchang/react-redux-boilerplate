@@ -1,7 +1,7 @@
 # react-redux-boilerplate
  - It is React-Redux as infrastructure boilerplate, with this developers just focus on developing component, action creator and reducer, without spending time in router, dev/pro build enviroement, wiring up file and express as HTTP server.
  
-# Read more
+## Read more
  - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) : story on Medium
  - [Documentation](https://github.com/wahengchang/react-redux-boilerplate/wiki) : detail about test and architecture
  - [Tutorial](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page) : add a new page

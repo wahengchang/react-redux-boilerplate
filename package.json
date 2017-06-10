@@ -27,14 +27,16 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
+    "css-loader": "^0.28.4",
     "enzyme": "^2.8.0",
     "jest": "^19.0.2",
     "jest-fetch-mock": "^1.1.1",
     "react-addons-test-utils": "^15.4.2",
     "regenerator-runtime": "*",
-    "webpack": "^1.12.15",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "style-loader": "^0.18.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
     "build": "NODE_ENV=build webpack --config ./webpack.prod.config.js --progress --colors",

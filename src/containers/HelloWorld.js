@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Hello from './../components/Hello'
 import helloActionCreator from '../actions/hello'
+import globalStyle from '../styles/global.css'
 
 const mapStateToProps = (state, ownProps) => {
   return {

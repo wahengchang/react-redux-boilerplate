@@ -15,6 +15,7 @@ import {
   Link
 } from 'react-router-dom'
 
+
 function serverRender(req, res) {
   const composeEnhancers = process.env.NODE_ENV !== 'production' && typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -62,6 +63,7 @@ function renderFullPage(html, preloadedState) {
     <html>
       <head>
         <title>Redux Hello World</title>
+        <link rel="stylesheet" type="text/css" href="/static/bundle.css">
       </head>
       <body>
         <div id="root">${(html)?html:''}</div>
@@ -70,6 +72,7 @@ function renderFullPage(html, preloadedState) {
           // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
         </script>
+        <script src="/static/vendor.js"></script>
         <script src="/static/bundle.js"></script>
       </body>
     </html>

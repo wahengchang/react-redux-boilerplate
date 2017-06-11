@@ -12,7 +12,7 @@ const config = {
   },
   output: {
     path: resolve(__dirname,'public/static'),
-    filename: '[name].js',
+    filename: 'bundle.js',
     publicPath: '/static/'
   },
   module: {
@@ -23,6 +23,23 @@ const config = {
           'babel-loader'
         ],
         exclude: '/node_modules/'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ]
       }
     ]
   },

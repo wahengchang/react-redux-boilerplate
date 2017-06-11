@@ -3,3 +3,5 @@ coverage
 build
 public
 .DS_Store
+dist
+public

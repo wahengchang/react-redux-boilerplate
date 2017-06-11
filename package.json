@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "babel-runtime": "^6.6.1",
+    "classnames": "^2.2.5",
     "express": "^4.13.4",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.0.1",
@@ -28,9 +29,12 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "css-loader": "^0.28.4",
+    "css-modules-require-hook": "^4.0.6",
     "enzyme": "^2.8.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "jest": "^19.0.2",
     "jest-fetch-mock": "^1.1.1",
+    "postcss-loader": "^2.0.5",
     "react-addons-test-utils": "^15.4.2",
     "regenerator-runtime": "*",
     "style-loader": "^0.18.2",
@@ -39,7 +43,7 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
-    "build": "NODE_ENV=build webpack --config ./webpack.prod.config.js --progress --colors",
+    "build": "NODE_ENV=production babel src --out-dir dist --copy-files && webpack -p --progress --colors --config webpack.prod.config.js",
     "start": "NODE_ENV=production node server.js",
     "dev": "NODE_ENV=development babel-node server.js --presets es2015,stage-2 server.js",
     "test": "./node_modules/jest/bin/jest.js  --coverage"

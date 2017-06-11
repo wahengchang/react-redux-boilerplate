@@ -4,6 +4,11 @@ require('babel-register');
 var app = new (require('express'))()
 var port = 3000
 
+require('css-modules-require-hook')({
+  generateScopedName: '[name]__[local]___[hash:base64:5]'
+})
+
+
 // initalize webpack dev middleware if in development context
 if (process.env.NODE_ENV === 'development') {
   var webpack = require('webpack')
@@ -20,13 +25,6 @@ if (process.env.NODE_ENV === 'development') {
 
   app.use(devMiddleware(compiler, devMiddlewareConfig))
   app.use(hotDevMiddleware(compiler))
-
-
-  // var webpackDevMiddleware = require('webpack-dev-middleware')
-  // var webpackHotMiddleware = require('webpack-hot-middleware')
-  // var compiler = webpack(config)
-  // app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
-  // app.use(webpackHotMiddleware(compiler))
 }
 
 app.use(require('express').static('public'))

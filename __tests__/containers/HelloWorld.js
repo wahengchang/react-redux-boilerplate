@@ -9,14 +9,6 @@ import HelloWorld from '../../src/containers/HelloWorld.js'
 
 import reducer from '../../src/reducers'
 
-jest.mock('../../src/components/Hello.css', () => {
-  return jest.fn();
-});
-
-jest.mock('../../src/styles/global.css', () => {
-  return jest.fn();
-});
-
 
 let store = createStore(
     reducer, 

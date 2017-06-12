@@ -35,7 +35,6 @@
     "jest": "^19.0.2",
     "jest-fetch-mock": "^1.1.1",
     "postcss-loader": "^2.0.5",
-    "protractor": "^5.1.2",
     "react-addons-test-utils": "^15.4.2",
     "regenerator-runtime": "*",
     "style-loader": "^0.18.2",

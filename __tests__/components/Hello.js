@@ -2,6 +2,10 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import Hello from '../../src/components/Hello'
 
+jest.mock('../../src/components/Hello.css', () => {
+  return jest.fn()
+})
+
 var _mockMessage = 'mock message'
 var _mockFun = jest.fn()
 function setup() {

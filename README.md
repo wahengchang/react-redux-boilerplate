@@ -60,7 +60,7 @@ $ ./node_modules/jest/bin/jest.js --watchAll #runs all tests
 Above is the structure of how the whole app works, the app bases on Express web framework, which serves only one route, with res.sendFile function to put index.html into the browser. Inside the scoop of the structure, what we are interested is the blue box, the interaction between react component, redux, root component, store and reducer.
 
 # React-Redux Structure
-![React-Redux Structure](https://cdn-images-1.medium.com/max/1500/1*OueT3QJ51YGt2lwCdkw2sQ.jpeg "React Redux Structure of data, store, props, state and component")
+![react-helloworld-component-5-20](https://user-images.githubusercontent.com/5538753/27132284-dfaeda12-5140-11e7-9855-7681362a00f8.jpg)
 _**index.js**_ , as the entry file and a high level root component, which gathers all the sub-component as the subtree of the Virtual DOM, also it is the only file entangled with many independent modules. Apart from it, different file requires independent modules, which makes clean code and work independently.
 
 ## Must Know

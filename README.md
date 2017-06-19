@@ -5,6 +5,7 @@
  - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) : story on Medium
  - [Documentation](https://github.com/wahengchang/react-redux-boilerplate/wiki) : detail about test and architecture
  - [Tutorial](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page) : add a new page
+ - [Project](https://github.com/wahengchang/react-redux-boilerplate-example) : thread upvote/downvote (Isomorphic -> Componen t-> ActionCreator-> Reducer)
 
 
 ## Install

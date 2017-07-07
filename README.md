@@ -3,10 +3,11 @@
  
 ## Read more
  - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) : story on Medium
+ - [Storybook Cheatsheet](https://github.com/wahengchang/react-redux-boilerplate/wiki/storybook-cheatsheet)
  - [Documentation](https://github.com/wahengchang/react-redux-boilerplate/wiki) : detail about test and architecture
  - [Adding a new page example](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page)
  - [Thread upvote/downvote project](https://github.com/wahengchang/react-redux-boilerplate-example)
-
+ 
 
 ## Install
 

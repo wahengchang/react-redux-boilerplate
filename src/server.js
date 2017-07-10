@@ -12,7 +12,7 @@ require('css-modules-require-hook')({
 // initalize webpack dev middleware if in development context
 if (process.env.NODE_ENV === 'development') {
   var webpack = require('webpack')
-  var config = require('./webpack.config')
+  var config = require('../webpack.config')
 
   var devMiddleware = require('webpack-dev-middleware')
   var hotDevMiddleware = require('webpack-hot-middleware')
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(require('express').static('public'))
 
-var serverRender = require('./src/serverRender')
+var serverRender = require('./serverRender')
 
 app.get("*", serverRender)
 

@@ -17,7 +17,7 @@ const config = {
     ]
   },
   output: {
-    path: resolve(__dirname, 'dist/public/static'),
+    path: resolve(__dirname, 'public/static'),
     filename: '[name].js',
     publicPath: '/static/'
   },

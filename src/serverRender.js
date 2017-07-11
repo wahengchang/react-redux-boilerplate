@@ -57,13 +57,21 @@ function renderStoreRouter(store, req, res) {
   res.send(renderFullPage(componentStr, store.getState()))
 }
 
+
 function renderFullPage(html, preloadedState) {
+  let vendorJS = ''
+  let bundleCSS = ''
+  if (process.env.NODE_ENV === 'development') {
+  } else {
+    bundleCSS = '/static/bundle.css'
+    vendorJS = '/static/vendor.js'
+  }
   return `
     <!DOCTYPE html>
     <html>
       <head>
         <title>Redux Hello World</title>
-        <link rel="stylesheet" type="text/css" href="/static/bundle.css">
+        <link rel="stylesheet" type="text/css" href=${bundleCSS}>
       </head>
       <body>
         <div id="root">${process.env.NODE_ENV === 'production' ? html : `<div>${html}</div>`}</div>
@@ -72,7 +80,7 @@ function renderFullPage(html, preloadedState) {
           // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
         </script>
-        <script src="/static/vendor.js"></script>
+        <script src=${vendorJS}></script>
         <script src="/static/bundle.js"></script>
       </body>
     </html>

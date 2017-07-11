@@ -4,10 +4,9 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = {
-  context: resolve(__dirname, 'src'),
   entry: {
     bundle: [
-      './clientRender.js'
+      './src/clientRender.js'
     ],
     'vendor/js': [
       'react',

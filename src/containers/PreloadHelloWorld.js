@@ -21,14 +21,14 @@ const preloadHello = connect(
   mapDispatchToProps
 )(Hello)
 
-preloadHello.initState = (store,req,res) => {
-    return (dispatch, getState) => {
-      return new Promise( (resolve, reject)=> {      
-        console.log('preload ......................')  
-        dispatch(helloActionCreator.helloWorld())
-        resolve(1)
-      })
-    }
+preloadHello.initState = (store, req, res) => {
+  return (dispatch, getState) => {
+    return new Promise((resolve, reject) => {
+      console.log('preload ......................')
+      dispatch(helloActionCreator.helloWorld())
+      resolve(1)
+    })
+  }
 }
 
 export default preloadHello

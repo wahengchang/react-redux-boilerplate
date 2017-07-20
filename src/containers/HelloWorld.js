@@ -22,12 +22,12 @@ const hello = connect(
   mapDispatchToProps
 )(Hello)
 
-hello.initState = (store,req,res) => {
-    return (dispatch, getState) => {
-      return new Promise( (resolve, reject)=> {
-        resolve ()
-      })
-    }
+hello.initState = (store, req, res) => {
+  return (dispatch, getState) => {
+    return new Promise((resolve, reject) => {
+      resolve()
+    })
+  }
 }
 
 

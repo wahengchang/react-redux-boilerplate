@@ -1,8 +1,8 @@
 
 require('babel-register');
 
-var app = new (require('express'))()
-var port = 3000
+let app = new (require('express'))()
+const port = 3000
 
 require('css-modules-require-hook')({
   generateScopedName: '[name]__[local]___[hash:base64:5]'
@@ -11,13 +11,13 @@ require('css-modules-require-hook')({
 
 // initalize webpack dev middleware if in development context
 if (process.env.NODE_ENV === 'development') {
-  var webpack = require('webpack')
-  var config = require('../webpack.config')
+  let webpack = require('webpack')
+  let config = require('../webpack.config')
 
-  var devMiddleware = require('webpack-dev-middleware')
-  var hotDevMiddleware = require('webpack-hot-middleware')
-  var compiler = webpack(config)
-  var devMiddlewareConfig = {
+  let devMiddleware = require('webpack-dev-middleware')
+  let hotDevMiddleware = require('webpack-hot-middleware')
+  let compiler = webpack(config)
+  let devMiddlewareConfig = {
     noInfo: true,
     stats: {colors: true},
     publicPath: config.output.publicPath
@@ -29,14 +29,14 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(require('express').static('public'))
 
-var serverRender = require('./serverRender')
+let serverRender = require('./serverRender')
 
-app.get("*", serverRender)
+app.get('*', serverRender)
 
 app.listen(port, function(error) {
   if (error) {
     console.error(error)
   } else {
-    console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+    console.info('==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.', port, port)
   }
 })

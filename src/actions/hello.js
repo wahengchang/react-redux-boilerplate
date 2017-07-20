@@ -1,14 +1,14 @@
 import { HELLO_WORLD, SET_MESSAGE } from '../config/actionType'
 
 const helloActionCreator = {
-  helloWorld : () => {
+  helloWorld: () => {
     return (dispatch, getState) => {
       return dispatch({
         type: HELLO_WORLD,
       })
     }
-  }, 
-  setMessage : (_message) => {
+  },
+  setMessage: (_message) => {
     return (dispatch, getState) => {
       return dispatch({
         type: SET_MESSAGE,

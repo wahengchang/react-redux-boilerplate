@@ -24,6 +24,15 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.js[x]?$/,
+        enforce: 'pre',
+        use: [{
+          loader: 'eslint-loader', 
+          options: { fix: true }
+        }],
+        exclude: '/node_modules/'
+      },
+      {
         test: /\.js$/,
         use: [
           'babel-loader'

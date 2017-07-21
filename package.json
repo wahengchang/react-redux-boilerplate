@@ -59,6 +59,7 @@
     "test:watch": "./node_modules/jest/bin/jest.js --watchAll #runs all tests  --cache ",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "lint:fix": "eslint --fix .js src",
     "lint": "eslint --ext .js src"
   },
   "eslintConfig": {

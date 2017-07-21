@@ -63,6 +63,7 @@ function renderFullPage(html, preloadedState) {
   let vendorJS = ''
   let bundleCSS = ''
   if (process.env.NODE_ENV === 'development') {
+    // do something
   } else {
     bundleCSS = '/static/bundle.css'
     vendorJS = '/static/vendor.js'

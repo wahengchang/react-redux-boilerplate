@@ -2,12 +2,11 @@
  - It is React-Redux as infrastructure boilerplate, with this developers just focus on developing component, action creator and reducer, without spending time in router, dev/pro build enviroement, wiring up file and express as HTTP server.
  
 ## Read more
- - [Blog](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285) : story on Medium
- - [Storybook Cheatsheet](https://github.com/wahengchang/react-redux-boilerplate/wiki/storybook-cheatsheet)
- - [Documentation](https://github.com/wahengchang/react-redux-boilerplate/wiki) : detail about test and architecture
- - [Adding a new page example](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page)
- - [Thread upvote/downvote project](https://github.com/wahengchang/react-redux-boilerplate-example)
- 
+ - [Knowledge of isomorphic needed to know: ](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285)
+ - [Knowledge of Testing](https://github.com/wahengchang/react-redux-boilerplate/wiki/Test)
+ - [Example: Adding new page](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page)
+ - [Example: Thread upvote/downvote project](https://github.com/wahengchang/react-redux-boilerplate-example)
+  - [Storybook Cheatsheet](https://github.com/wahengchang/react-redux-boilerplate/wiki/storybook-cheatsheet)
 
 ## Install
 
@@ -20,7 +19,8 @@ $ npm install
 It is runnign in Development mode, enable HMR
  - http://localhost:3000/
  - http://localhost:3000/api , example of fetching data by action, and dispatch to update UI component
- - http://localhost:3000/preload , example of dispatch data before server rendering components
+ - http://localhost:3000/preload , example of fetch data from [here](https://jsonplaceholder.typicode.com/posts
+ ), before server rendering components
 
 ```
 $ npm run dev
@@ -34,9 +34,22 @@ open http://localhost:3000/
  - Disable unnecessary funtionality which helps to debug in development mode
 ```
 $ npm run build
-$ npm run start
+$ node dist/server.js 
 
 ```
+
+## lint
+
+#### lint fix
+```
+$ npm run lint:fix
+```
+
+#### lint check
+```
+$ npm run lint
+```
+
 
 ## Storybook
 ```
@@ -77,4 +90,4 @@ _**index.js**_ , as the entry file and a high level root component, which gather
 
 
 ## Credit
-[https://github.com/vaibhavmule/react-redux-helloworld](https://github.com/vaibhavmule/react-redux-helloworld)
+ - [https://github.com/vaibhavmule/react-redux-helloworld](https://github.com/vaibhavmule/react-redux-helloworld)

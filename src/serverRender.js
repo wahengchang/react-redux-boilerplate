@@ -76,7 +76,7 @@ function renderFullPage(html, preloadedState) {
         <link rel="stylesheet" type="text/css" href=${bundleCSS}>
       </head>
       <body>
-        <div id="root">${process.env.NODE_ENV === 'production' ? html : `<div>${html}</div>`}</div>
+        <div id="root">${`<div>${html}</div>`}</div>
         <script>
           // WARNING: See the following for security issues around embedding JSON in HTML:
           // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations

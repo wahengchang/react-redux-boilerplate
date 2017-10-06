@@ -11,7 +11,7 @@ import thunk from 'redux-thunk'
 import _reducers from './reducers'
 import matchConfig from './matchConfig'
 import {
-  StaticRouter,
+  BrowserRouter,
   Route,
   Switch
 } from 'react-router-dom'
@@ -34,13 +34,13 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <StaticRouter location={window.location.pathname} context={{}}>
+    <BrowserRouter location={window.location.pathname} context={{}}>
       <Switch>
         {
           matchConfig.map((route, index) => <Route key={`route${index}`} {...route} />)
         }
       </Switch>
-    </StaticRouter>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 )

@@ -48,13 +48,13 @@
     "react-addons-test-utils": "^15.4.2",
     "regenerator-runtime": "*",
     "style-loader": "^0.18.2",
-    "webpack": "^2.5.1",
+    "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --copy-files && webpack -p --progress --config webpack.prod.config.js",
-    "start": "NODE_ENV=production node ./src/server.js",
+    "start": "NODE_ENV=production node ./dist/server.js",
     "dev": "NODE_ENV=development babel-node ./src/server.js --presets es2015,stage-2",
     "test": "./node_modules/jest/bin/jest.js  --coverage",
     "test:watch": "./node_modules/jest/bin/jest.js --watchAll #runs all tests  --cache ",

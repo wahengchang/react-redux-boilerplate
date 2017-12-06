@@ -1,0 +1,12 @@
+.loaderBox {
+    position: absolute;
+    z-index: 1;
+}
+
+.loaderBox img {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    margin: 0 auto;
+    width: 50px;
+}

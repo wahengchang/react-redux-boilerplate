@@ -2,11 +2,11 @@
  - It is React-Redux as infrastructure boilerplate, with this developers just focus on developing component, action creator and reducer, without spending time in router, dev/pro build enviroement, wiring up file and express as HTTP server.
  
 ## Read more
- - [Knowledge of isomorphic needed to know: ](https://hackernoon.com/isomorphic-universal-boilerplate-react-redux-server-rendering-tutorial-example-webpack-compenent-6e22106ae285)
- - [Knowledge of Testing](https://github.com/wahengchang/react-redux-boilerplate/wiki/Test)
  - [Example: Adding new page](https://github.com/wahengchang/react-redux-boilerplate/wiki/Add-new-page)
  - [Example: Thread upvote/downvote project](https://github.com/wahengchang/react-redux-boilerplate-example)
-  - [Storybook Cheatsheet](https://github.com/wahengchang/react-redux-boilerplate/wiki/storybook-cheatsheet)
+ - [Shared components Storybook](https://github.com/wahengchang/react-redux-boilerplate/tree/master/src/components) `$ npm run storybook`
+    - EditableDiv
+    - Loading icon
 
 ## Install
 
